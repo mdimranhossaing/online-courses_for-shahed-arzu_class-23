@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* Site header area start */
+#header-area {
+  padding: 15px 0;
+  background-color: #3B5998;
+}
+
+#header-area .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo area */
+.logo-area a {
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+}
+
+/* Login area */
+.login-area {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  gap: 10px;
+}
+
+.login-area label {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-area label::first-letter {
+  text-transform: uppercase;
+}
+
+.login-area input {
+  display: block;
+  padding: 2px 3px;
+  box-sizing: border-box;
+}
+
+.login-area input[type="checkbox"] {
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.login-area label[for="keep"] {
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 0.8em;
+  color: #AEBAD4;
+}
+
+.login-area .field a {
+  display: block;
+  text-decoration: none;
+  color: #AEBAD4;
+  font-size: 0.8em;
+  margin-top: 3px;
+}
+
+.login-area .field a::first-letter {
+  text-transform: uppercase;
+}
+
+.login-area input[type="submit"] {
+  background-color: #4267B2;
+  color: white;
+  text-transform: capitalize;
+  padding: 3px 25px;
+  border: 2px solid #3F4F70;
+  margin-top: 26px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.login-area input[type="submit"]:hover {
+  background-color: #365899;
+}
+
+/* Media Query Start */
+@media only screen and (max-width: 767px) {
+
+  #header-area .container {
+    flex-direction: column;
+  }
+
+  .logo-area {
+    margin-bottom: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 575px) {
+  .login-area {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  .login-area :not(input[type="checkbox"]) {
+    width: 100%;
+  }
+  .login-area label[for="keep"] {
+    display: inline;
+  }
+  .login-area input[type="submit"] {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+
+/* Site header area end */
